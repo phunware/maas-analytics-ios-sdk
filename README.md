@@ -55,72 +55,61 @@ Inside your application delegate you will need to initialize MaaSCore in the app
     [MaaSCore setApplicationID:@"APPLICATION_ID"
     			   setAccessKey:@"ACCESS_KEY"
                   signatureKey:@"SIGNATURE_KEY"
-                 encryptionKey:@"ENCRYPT_KEY"]; // Currently unused. You can place anything NSString value here
+                 encryptionKey:@"ENCRYPT_KEY"]; // Currently unused. You can place any NSString value here
     ...
 }
 ````
+### Adding Events
 
-Apple has three primary methods for handling remote notifications. You will need to implement these in your application delegate, forwarding the results to MaaSAlerts:
-
+Adding events with MaaSAnalytics is easy:
 ````objective-c
-- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken
+- (void)viewWillAppear:(BOOL)animated
 {
-    [MaaSAlerts didRegisterForRemoteNotificationsWithDeviceToken:devToken];
-    ...
-}
-
-- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err
-{
-    [MaaSAlerts didFailToRegisterForRemoteNotificationsWithError:err];
-    ...
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
-{
-    [MaaSAlerts didReceiveRemoteNotification:userInfo];
-    ...
+	[super viewWillAppear:animated];
+	
+	[MaaSAnalytics addEvent:@"Featured Page View"];
+	...
 }
 ````
 
-For a complete example, see https://github.com/phunware/maas-alerts-ios-sdk/Sample
+### Timed Events
 
-
-Subscription Groups
--------------------
-MaaS Portal provides the ability to setup subscribtion groups for which more filtered alerts and notifications can be received. There are two MaaSAlerts SDK methods the facilitate this, *getSubscriptionGroupsWithSuccess:failure:* and *subscribeToGroupsWithIDs:success:failure:*.
-
+MaaSAnalytics supports timed analytics:
 ````objective-c
-// Fetch an array of of the available subscriptions
-[MaaSAlerts getSubscriptionGroupsWithSuccess:^(NSArray *groups) {
-        // Display the available subscription groups to the user
-        // The groups array will contain dictionary objects the conform to the following structure: {@"id" : @"SUBCRIPTION_GROUP_ID", @"name" : @"SUBSCRIPTION_GROUP_NAME"}
-    } failure:^(NSError *error) {
-		// Handle error
-    }];
-    
-    
-// To update the subscription groups you would make the following call
-NSArray *subscribedGroups = @[@"SUBSCRIPTION_GROUP_ID", ...];
-[MaaSAlerts subscribeToGroupsWithIDs:subscribedGroups success:^{
-        // Handle success
-edGroups    } failure:^(NSError *error) {
-        // Handle error
-    }];
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	
+	// Start a timed event like so
+	[MaaSAnalytics startTimedEvent:@"My Awesome Game - Level 1"];
+	
+	...
+	
+	// To end a timed event:
+	[MaaSAnalytics endTimedEvent:@"My Awesome Game - Level 1"];
 }
 ````
 
-Optional
---------
+### Event Parameters
 
-Fetching extra information associated with a push notification using MaaSAlerts is easy using *getExtraInformationForPushID:success:failure:* 
-
+MaaSAnalytics allows you to paramaterize your all of your events with up to 10 key value string pairs.
 ````objective-c
-[MaaSAlerts getExtraInformationForPushID:@"PUSH_ID" success:^(NSDictionary *extraInformation) {
-        // Process the extra information
-    } failure:^(NSError *error) {
-        // Handle error
-    }];
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	
+	[MaaSAnalytics addEvent:@"Featured Page View" withParamaters:@{@"gender" : @"male"}];
+	
+	[MaaSAnalytics addEvent:@"My Awesome Game - Level 1" withParamaters:@{@"difficulty" : @"easy"}];
+	
+	// Keep in mind that when calling endTimedEvent:withParameters: it will replace any parameters that you specified in startTimedEvent:withParameters:.
+	[MaaSAnalytics endTimedEvent:@"My Awesome Game - Level 1" withParamaters:@{@"difficulty" : @"easy", @"attempts" : @"5"}];
+	...
+}
 ````
+
+That's all there is to it!
+
 
 
 Requirements
