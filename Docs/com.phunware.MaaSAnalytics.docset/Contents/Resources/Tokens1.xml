@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MaaSAnalytics.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MaaSAnalytics</TokenIdentifier>
+			<Abstract type="html">MaaSAnalytics TBD!</Abstract>
+			<DeclaredIn>MaaSAnalytics.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MaaSAnalytics/addEvent:</TokenIdentifier>
+			<Abstract type="html">Add an event to the analytics queue. Analytics will only be sent once a threshold has been reached, a new session is created, or the events are manually flushed.</Abstract>
+			<DeclaredIn>MaaSAnalytics.h</DeclaredIn>			
+			
+			<Declaration>+ (void)addEvent:(NSString *)eventName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">Name of the event.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addEvent:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MaaSAnalytics/addEvent:withParameters:</TokenIdentifier>
+			<Abstract type="html">Add an event to the analytics queue. Analytics will only be sent once a threshold has been reached, a new session is created, or the events are manually flushed. Parameters must follow these rules:
+  - Keys and values must be NSString objects
+  - There may be no more than 10 parameters. Extra parameters will be ignored
+  - Each key or value that is longer than 256 characters will be truncated</Abstract>
+			<DeclaredIn>MaaSAnalytics.h</DeclaredIn>			
+			
+			<Declaration>+ (void)addEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">Name of the event.</Abstract>
+				</Parameter><Parameter>
+					<Name>parameters</Name>
+					<Abstract type="html">NSString key/value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addEvent:withParameters:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MaaSAnalytics/startTimedEvent:</TokenIdentifier>
+			<Abstract type="html">Start a timed event. Calling startTimedEvent: with the same eventName  prior to endTimedEvent: will overwrite the previous start time.</Abstract>
+			<DeclaredIn>MaaSAnalytics.h</DeclaredIn>			
+			
+			<Declaration>+ (void)startTimedEvent:(NSString *)eventName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">Name of the event to start.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/startTimedEvent:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MaaSAnalytics/startTimedEvent:withParameters:</TokenIdentifier>
+			<Abstract type="html">Start a timed event with the specified parameters. Calling startTimedEvent: with the same eventName  prior to endTimedEvent: will overwrite the previous start time. Parameters must follow these rules:
+- Keys and values must be NSString objects
+- There may be no more than 10 parameters. Extra parameters will be ignored
+- Each key or value that is longer than 256 characters will be truncated</Abstract>
+			<DeclaredIn>MaaSAnalytics.h</DeclaredIn>			
+			
+			<Declaration>+ (void)startTimedEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">Name of the event to start.</Abstract>
+				</Parameter><Parameter>
+					<Name>parameters</Name>
+					<Abstract type="html">NSString key/value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/startTimedEvent:withParameters:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MaaSAnalytics/endTimedEvent:</TokenIdentifier>
+			<Abstract type="html">End a timed event with the specified eventName. The event will be ignored if the event duration is less than 1 second. This method will do nothing if the event name cannot be found.</Abstract>
+			<DeclaredIn>MaaSAnalytics.h</DeclaredIn>			
+			
+			<Declaration>+ (void)endTimedEvent:(NSString *)eventName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">The name of the event to end.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/endTimedEvent:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MaaSAnalytics/endTimedEvent:withParameters:</TokenIdentifier>
+			<Abstract type="html">End a timed event with the specified eventName. The event will be ignored if the event duration is less than 1 second. This method will do nothing if the event name cannot be found. Parameters must follow these rules:
+- Keys and values must be NSString objects
+- There may be no more than 10 parameters. Extra parameters will be ignored
+- Each key or value that is longer than 256 characters will be truncated</Abstract>
+			<DeclaredIn>MaaSAnalytics.h</DeclaredIn>			
+			
+			<Declaration>+ (void)endTimedEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">The name of the event to end.</Abstract>
+				</Parameter><Parameter>
+					<Name>parameters</Name>
+					<Abstract type="html">NSString key/value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/endTimedEvent:withParameters:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MaaSAnalytics/serviceName</TokenIdentifier>
+			<Abstract type="html">Returns &apos;MaaSAnalytics&apos;.</Abstract>
+			<DeclaredIn>MaaSAnalytics.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)serviceName</Declaration>
+			
+			
+			<Anchor>//api/name/serviceName</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>
