@@ -100,10 +100,10 @@ MaaSAnalytics allows you to paramaterize your all of your events with up to 10 k
 	
 	[MaaSAnalytics addEvent:@"Featured Page View" withParamaters:@{@"gender" : @"male"}];
 	
-	[MaaSAnalytics addEvent:@"My Awesome Game - Level 1" withParamaters:@{@"difficulty" : @"easy"}];
+	[MaaSAnalytics addEvent:@"My Awesome Game - Level 1" withParameters:@{@"difficulty" : @"easy"}];
 	
 	// Keep in mind that when calling endTimedEvent:withParameters: it will replace any parameters that you specified in startTimedEvent:withParameters:.
-	[MaaSAnalytics endTimedEvent:@"My Awesome Game - Level 1" withParamaters:@{@"difficulty" : @"easy", @"attempts" : @"5"}];
+	[MaaSAnalytics endTimedEvent:@"My Awesome Game - Level 1" withParameters:@{@"difficulty" : @"easy", @"attempts" : @"5"}];
 	...
 }
 ````
