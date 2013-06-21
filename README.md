@@ -76,17 +76,18 @@ Adding events with MaaSAnalytics is easy:
 
 MaaSAnalytics supports timed analytics:
 ````objective-c
-- (void)viewWillAppear:(BOOL)animated
-{
-	[super viewWillAppear:animated];
-	
+- (void)startLevel:(PWGameLevel *)level
+{	
 	// Start a timed event like so
 	[MaaSAnalytics startTimedEvent:@"My Awesome Game - Level 1"];
-	
 	...
-	
+}
+
+- (void)endLevel:(PWGameLevel *)level
+{	
 	// To end a timed event:
 	[MaaSAnalytics endTimedEvent:@"My Awesome Game - Level 1"];
+	...
 }
 ````
 
