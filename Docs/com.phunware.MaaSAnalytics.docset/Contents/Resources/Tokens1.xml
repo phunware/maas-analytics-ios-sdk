@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/MaaSAnalytics</TokenIdentifier>
-			<Abstract type="html">MaaSAnalytics TBD!</Abstract>
+			<Abstract type="html">MaaSAnalytics enables easy implementation of application workflow analytics. MaaSAnalytics supports standard analytics events, timed events, and event parameters.</Abstract>
 			<DeclaredIn>MaaSAnalytics.h</DeclaredIn>
 			
 			<NodeRef refid="1"/>
