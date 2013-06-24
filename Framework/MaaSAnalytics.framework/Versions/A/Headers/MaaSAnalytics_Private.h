@@ -17,5 +17,6 @@
 - (void)addEventToCache:(PWAnalyticEvent *)analyticsEvent;
 - (void)flushEventCacheIfNecessary;
 - (void)flushEventCache;
+- (NSMutableArray *)fetchEventCache;
 
 @end
