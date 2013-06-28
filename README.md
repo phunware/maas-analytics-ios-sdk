@@ -40,7 +40,7 @@ Documentation is included in the Documents folder in the repository as both HTML
 Integration
 -----------
 
-For wherever you'd like to add analytic events you'll eed to import the MaaSAnalytics.framework. You may want to include it in your Prefix.pch.
+For wherever you'd like to add analytic events you'll need to import the MaaSAnalytics.framework. You may want to include it in your Prefix.pch.
 
 ````objective-c
 #import <MaaSAnalytics/MaaSAnalytics.h>
