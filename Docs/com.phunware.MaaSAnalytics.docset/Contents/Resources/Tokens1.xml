@@ -88,6 +88,38 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MaaSAnalytics/pauseTimedEvent:</TokenIdentifier>
+			<Abstract type="html">Pause a timed event with the specified eventName. If an event is ended while still in a paused state then the paused time will be used as the end time. If an event is already paused then this method will do nothing.</Abstract>
+			<DeclaredIn>MaaSAnalytics.h</DeclaredIn>			
+			
+			<Declaration>+ (void)pauseTimedEvent:(NSString *)eventName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">The name of the event to pause.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pauseTimedEvent:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MaaSAnalytics/resumeTimedEvent:</TokenIdentifier>
+			<Abstract type="html">Resume a timed event with the specified eventName. If an event is ended while still in a paused state then the paused time will be used as the end time. If an event is already paused then this method will do nothing.</Abstract>
+			<DeclaredIn>MaaSAnalytics.h</DeclaredIn>			
+			
+			<Declaration>+ (void)resumeTimedEvent:(NSString *)eventName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">The name of the event to resume.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/resumeTimedEvent:</Anchor>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/MaaSAnalytics/endTimedEvent:</TokenIdentifier>
 			<Abstract type="html">End a timed event with the specified eventName. The event will be ignored if the event duration is less than 1 second. This method will do nothing if the event name cannot be found.</Abstract>
 			<DeclaredIn>MaaSAnalytics.h</DeclaredIn>			
