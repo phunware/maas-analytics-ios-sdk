@@ -51,6 +51,18 @@
 + (void)startTimedEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters;
 
 /**
+ Pause a timed event with the specified `eventName`. If an event is ended while still in a paused state then the paused time will be used as the end time. If an event is already paused then this method will do nothing.
+ @param eventName The name of the event to pause.
+ */
++ (void)pauseTimedEvent:(NSString *)eventName;
+
+/**
+ Resume a timed event with the specified `eventName`. If an event is ended while still in a paused state then the paused time will be used as the end time. If an event is already paused then this method will do nothing. 
+ @param eventName The name of the event to resume.
+ */
++ (void)resumeTimedEvent:(NSString *)eventName;
+
+/**
  End a timed event with the specified `eventName`. The event will be ignored if the event duration is less than 1 second. This method will do nothing if the event name cannot be found.
  @param eventName The name of the event to end.
  */
