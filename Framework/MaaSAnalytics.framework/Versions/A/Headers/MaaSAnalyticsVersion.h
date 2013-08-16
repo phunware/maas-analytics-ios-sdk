@@ -8,6 +8,6 @@
 #ifndef MaaSAnalytics_MaaSAnalyticsVersion_h
 #define MaaSAnalytics_MaaSAnalyticsVersion_h
 
-#define MaaSAnalytics_VERSION  @"1.1.0"
+#define MaaSAnalytics_VERSION  @"1.1.1"
 
 #endif

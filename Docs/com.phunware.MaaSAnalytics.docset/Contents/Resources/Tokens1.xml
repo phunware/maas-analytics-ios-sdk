@@ -13,14 +13,14 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/MaaSAnalytics/addEvent:</TokenIdentifier>
-			<Abstract type="html">Add an event to the analytics queue. Analytics will only be sent once a threshold has been reached, a new session is created, or the events are manually flushed.</Abstract>
+			<Abstract type="html">Add an event to the analytics queue.</Abstract>
 			<DeclaredIn>MaaSAnalytics.h</DeclaredIn>			
 			
 			<Declaration>+ (void)addEvent:(NSString *)eventName</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>eventName</Name>
-					<Abstract type="html">Name of the event.</Abstract>
+					<Abstract type="html">Name of the event. The eventName must be alphanumeric.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -29,8 +29,8 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/MaaSAnalytics/addEvent:withParameters:</TokenIdentifier>
-			<Abstract type="html">Add an event to the analytics queue. Analytics will only be sent once a threshold has been reached, a new session is created, or the events are manually flushed. Parameters must follow these rules:
-  - Keys and values must be NSString objects
+			<Abstract type="html">Add an event to the analytics queue. Parameters must follow these rules:
+  - Keys and values must be NSString objects.
   - There may be no more than 10 parameters. Extra parameters will be ignored
   - Each key or value that is longer than 256 characters will be truncated</Abstract>
 			<DeclaredIn>MaaSAnalytics.h</DeclaredIn>			
@@ -39,10 +39,10 @@
 			<Parameters>
 				<Parameter>
 					<Name>eventName</Name>
-					<Abstract type="html">Name of the event.</Abstract>
+					<Abstract type="html">Name of the event. The eventName must be alphanumeric.</Abstract>
 				</Parameter><Parameter>
 					<Name>parameters</Name>
-					<Abstract type="html">NSString key/value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}.</Abstract>
+					<Abstract type="html">NSString key/value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}. The key and values must be alphanumeric.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -77,10 +77,10 @@
 			<Parameters>
 				<Parameter>
 					<Name>eventName</Name>
-					<Abstract type="html">Name of the event to start.</Abstract>
+					<Abstract type="html">Name of the event to start. The eventName must be alphanumeric.</Abstract>
 				</Parameter><Parameter>
 					<Name>parameters</Name>
-					<Abstract type="html">NSString key/value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}.</Abstract>
+					<Abstract type="html">NSString key/value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}. The key and values must be alphanumeric.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -96,7 +96,7 @@
 			<Parameters>
 				<Parameter>
 					<Name>eventName</Name>
-					<Abstract type="html">The name of the event to pause.</Abstract>
+					<Abstract type="html">The name of the event to pause. The eventName must be alphanumeric.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -112,7 +112,7 @@
 			<Parameters>
 				<Parameter>
 					<Name>eventName</Name>
-					<Abstract type="html">The name of the event to resume.</Abstract>
+					<Abstract type="html">The name of the event to resume. The eventName must be alphanumeric.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -128,7 +128,7 @@
 			<Parameters>
 				<Parameter>
 					<Name>eventName</Name>
-					<Abstract type="html">The name of the event to end.</Abstract>
+					<Abstract type="html">The name of the event to end. The eventName must be alphanumeric.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -147,10 +147,10 @@
 			<Parameters>
 				<Parameter>
 					<Name>eventName</Name>
-					<Abstract type="html">The name of the event to end.</Abstract>
+					<Abstract type="html">The name of the event to end. The eventName must be alphanumeric.</Abstract>
 				</Parameter><Parameter>
 					<Name>parameters</Name>
-					<Abstract type="html">NSString key/value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}.</Abstract>
+					<Abstract type="html">NSString key/value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}. The key and values must be alphanumeric.</Abstract>
 				</Parameter>
 			</Parameters>
 			

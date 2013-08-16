@@ -19,18 +19,18 @@
 ///-----------------------
 
 /**
- Add an event to the analytics queue. Analytics will only be sent once a threshold has been reached, a new session is created, or the events are manually flushed.
- @param eventName Name of the event.
+ Add an event to the analytics queue.
+ @param eventName Name of the event. The eventName must be alphanumeric.
  */
 + (void)addEvent:(NSString *)eventName;
 
 /**
- Add an event to the analytics queue. Analytics will only be sent once a threshold has been reached, a new session is created, or the events are manually flushed. Parameters must follow these rules:
-  - Keys and values must be `NSString` objects
+ Add an event to the analytics queue. Parameters must follow these rules:
+  - Keys and values must be `NSString` objects.
   - There may be no more than 10 parameters. Extra parameters will be ignored
   - Each key or value that is longer than 256 characters will be truncated
- @param eventName Name of the event.
- @param parameters `NSString` key/value parameters. For example, `@{@"key" : @"value"}`.
+ @param eventName Name of the event. The eventName must be alphanumeric.
+ @param parameters `NSString` key/value parameters. For example, `@{@"key" : @"value"}`. The key and values must be alphanumeric.
  */
 + (void)addEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters;
 
@@ -45,26 +45,26 @@
  - Keys and values must be `NSString` objects
  - There may be no more than 10 parameters. Extra parameters will be ignored
  - Each key or value that is longer than 256 characters will be truncated
- @param eventName Name of the event to start.
- @param parameters `NSString` key/value parameters. For example, `@{@"key" : @"value"}`.
+ @param eventName Name of the event to start. The eventName must be alphanumeric.
+ @param parameters `NSString` key/value parameters. For example, `@{@"key" : @"value"}`. The key and values must be alphanumeric.
  */
 + (void)startTimedEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters;
 
 /**
  Pause a timed event with the specified `eventName`. If an event is ended while still in a paused state then the paused time will be used as the end time. If an event is already paused then this method will do nothing.
- @param eventName The name of the event to pause.
+ @param eventName The name of the event to pause. The eventName must be alphanumeric.
  */
 + (void)pauseTimedEvent:(NSString *)eventName;
 
 /**
  Resume a timed event with the specified `eventName`. If an event is ended while still in a paused state then the paused time will be used as the end time. If an event is already paused then this method will do nothing. 
- @param eventName The name of the event to resume.
+ @param eventName The name of the event to resume. The eventName must be alphanumeric.
  */
 + (void)resumeTimedEvent:(NSString *)eventName;
 
 /**
  End a timed event with the specified `eventName`. The event will be ignored if the event duration is less than 1 second. This method will do nothing if the event name cannot be found.
- @param eventName The name of the event to end.
+ @param eventName The name of the event to end. The eventName must be alphanumeric.
  */
 + (void)endTimedEvent:(NSString *)eventName;
 
@@ -73,8 +73,8 @@
  - Keys and values must be `NSString` objects
  - There may be no more than 10 parameters. Extra parameters will be ignored
  - Each key or value that is longer than 256 characters will be truncated
- @param eventName The name of the event to end.
- @param parameters `NSString` key/value parameters. For example, `@{@"key" : @"value"}`.
+ @param eventName The name of the event to end. The eventName must be alphanumeric.
+ @param parameters `NSString` key/value parameters. For example, `@{@"key" : @"value"}`. The key and values must be alphanumeric.
  */
 + (void)endTimedEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters;
 
