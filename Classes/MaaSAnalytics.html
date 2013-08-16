@@ -168,15 +168,15 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/addEvent:">+&nbsp;addEvent:</a></code>
-		<span class="tooltip"><p>Add an event to the analytics queue. Analytics will only be sent once a threshold has been reached, a new session is created, or the events are manually flushed.</p></span>
+		<span class="tooltip"><p>Add an event to the analytics queue.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/addEvent:withParameters:">+&nbsp;addEvent:withParameters:</a></code>
-		<span class="tooltip"><p>Add an event to the analytics queue. Analytics will only be sent once a threshold has been reached, a new session is created, or the events are manually flushed. Parameters must follow these rules:
-  &ndash; Keys and values must be <code>NSString</code> objects
+		<span class="tooltip"><p>Add an event to the analytics queue. Parameters must follow these rules:
+  &ndash; Keys and values must be <code>NSString</code> objects.
   &ndash; There may be no more than 10 parameters. Extra parameters will be ignored
   &ndash; Each key or value that is longer than 256 characters will be truncated</p></span>
 	</span>
@@ -267,7 +267,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Add an event to the analytics queue. Analytics will only be sent once a threshold has been reached, a new session is created, or the events are manually flushed.</p>
+		<p>Add an event to the analytics queue.</p>
 	</div>		
 	
     
@@ -281,7 +281,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>eventName</em></dt>
-			<dd><p>Name of the event.</p></dd>
+			<dd><p>Name of the event. The eventName must be alphanumeric.</p></dd>
 		</dl>
 		
 	</div>
@@ -313,8 +313,8 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Add an event to the analytics queue. Analytics will only be sent once a threshold has been reached, a new session is created, or the events are manually flushed. Parameters must follow these rules:
-  &ndash; Keys and values must be <code>NSString</code> objects
+		<p>Add an event to the analytics queue. Parameters must follow these rules:
+  &ndash; Keys and values must be <code>NSString</code> objects.
   &ndash; There may be no more than 10 parameters. Extra parameters will be ignored
   &ndash; Each key or value that is longer than 256 characters will be truncated</p>
 	</div>		
@@ -330,12 +330,12 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>eventName</em></dt>
-			<dd><p>Name of the event.</p></dd>
+			<dd><p>Name of the event. The eventName must be alphanumeric.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>parameters</em></dt>
-			<dd><p><code>NSString</code> key/value parameters. For example, <code>@{@"key" : @"value"}</code>.</p></dd>
+			<dd><p><code>NSString</code> key/value parameters. For example, <code>@{@"key" : @"value"}</code>. The key and values must be alphanumeric.</p></dd>
 		</dl>
 		
 	</div>
@@ -381,7 +381,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>eventName</em></dt>
-			<dd><p>The name of the event to end.</p></dd>
+			<dd><p>The name of the event to end. The eventName must be alphanumeric.</p></dd>
 		</dl>
 		
 	</div>
@@ -430,12 +430,12 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>eventName</em></dt>
-			<dd><p>The name of the event to end.</p></dd>
+			<dd><p>The name of the event to end. The eventName must be alphanumeric.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>parameters</em></dt>
-			<dd><p><code>NSString</code> key/value parameters. For example, <code>@{@"key" : @"value"}</code>.</p></dd>
+			<dd><p><code>NSString</code> key/value parameters. For example, <code>@{@"key" : @"value"}</code>. The key and values must be alphanumeric.</p></dd>
 		</dl>
 		
 	</div>
@@ -481,7 +481,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>eventName</em></dt>
-			<dd><p>The name of the event to pause.</p></dd>
+			<dd><p>The name of the event to pause. The eventName must be alphanumeric.</p></dd>
 		</dl>
 		
 	</div>
@@ -527,7 +527,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>eventName</em></dt>
-			<dd><p>The name of the event to resume.</p></dd>
+			<dd><p>The name of the event to resume. The eventName must be alphanumeric.</p></dd>
 		</dl>
 		
 	</div>
@@ -658,12 +658,12 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>eventName</em></dt>
-			<dd><p>Name of the event to start.</p></dd>
+			<dd><p>Name of the event to start. The eventName must be alphanumeric.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>parameters</em></dt>
-			<dd><p><code>NSString</code> key/value parameters. For example, <code>@{@"key" : @"value"}</code>.</p></dd>
+			<dd><p><code>NSString</code> key/value parameters. For example, <code>@{@"key" : @"value"}</code>. The key and values must be alphanumeric.</p></dd>
 		</dl>
 		
 	</div>
@@ -703,7 +703,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Phunware, Inc.. All rights reserved. (Last updated: 2013-07-01)</span><br />
+						<p><span class="copyright">&copy; 2013 Phunware, Inc.. All rights reserved. (Last updated: 2013-08-16)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
