@@ -26,27 +26,27 @@ MaaSCore.framework
 
 MaaSAnalytics has a dependency on MaaSCore.framework which is available here: https://github.com/phunware/maas-core-ios-sdk
 
-It's recommended that you add the MaaS framesworks to the 'Vendor/Phunware' directory. This directory should contain MaaSCore.framework and MaaSAlerts.framework  as well as any other MaaS frameworks that you are using.
+It's recommended that you add the MaaS frameworks to the 'Vendor/Phunware' directory. This directory should contain MaaSCore.framework and MaaSAlerts.framework, as well as any other MaaS frameworks that you are using.
 
 
 
 Documentation
 ------------
 
-Documentation is included in the Documents folder in the repository as both HTML and .docset. You can also find the latest documentation here: http://phunware.github.io/maas-analytics-ios-sdk/.
+Documentation is included in the Documents folder in the repository as both HTML and as a .docset. You can also find the latest documentation here: http://phunware.github.io/maas-analytics-ios-sdk/
 
 
 
 Integration
 -----------
 
-For wherever you'd like to add analytic events you'll need to import the MaaSAnalytics.framework. You may want to include it in your Prefix.pch.
+You'll need to import the MaaSAnalytics.framework for wherever you'd like to add analytic events. You may want to include it in your Prefix.pch.
 
 ````objective-c
 #import <MaaSAnalytics/MaaSAnalytics.h>
 ````
 
-Inside your application delegate you will need to initialize MaaSCore in the application:didFinishLaunchingWithOptions: method. For more detailed MaaSCore installation instructions please see https://github.com/phunware/maas-core-ios-sdk#installation.
+Inside your application delegate, you will need to initialize MaaSCore in the application:didFinishLaunchingWithOptions: method. For more detailed MaaSCore installation instructions, please see: https://github.com/phunware/maas-core-ios-sdk#installation.
 
 ````objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -55,13 +55,13 @@ Inside your application delegate you will need to initialize MaaSCore in the app
     [MaaSCore setApplicationID:@"APPLICATION_ID"
     			   setAccessKey:@"ACCESS_KEY"
                   signatureKey:@"SIGNATURE_KEY"
-                 encryptionKey:@"ENCRYPT_KEY"]; // Currently unused. You can place any NSString value here
+                 encryptionKey:@"ENCRYPT_KEY"]; // Currently unused. You can place any NSString value here.
     ...
 }
 ````
 ### Adding Events
 
-Adding events with MaaSAnalytics is easy:
+To add events with MaaSAnalytics:
 ````objective-c
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -78,14 +78,14 @@ MaaSAnalytics supports timed analytics:
 ````objective-c
 - (void)startLevel:(PWGameLevel *)level
 {	
-	// Start a timed event like so
+	// Start a timed event like so:
 	[MaaSAnalytics startTimedEvent:@"My Awesome Game - Level 1"];
 	...
 }
 
 - (void)endLevel:(PWGameLevel *)level
 {	
-	// To end a timed event:
+	// And end a timed event like so:
 	[MaaSAnalytics endTimedEvent:@"My Awesome Game - Level 1"];
 	...
 }
@@ -93,7 +93,8 @@ MaaSAnalytics supports timed analytics:
 
 ### Event Parameters
 
-MaaSAnalytics allows you to paramaterize your all of your events with up to 10 key value string pairs.
+MaaSAnalytics allows you to paramaterize your all of your events with up to 10 key / value pairs. *All parameter keys and values must be alphanumeric strings.*
+
 ````objective-c
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -103,15 +104,11 @@ MaaSAnalytics allows you to paramaterize your all of your events with up to 10 k
 	
 	[MaaSAnalytics addEvent:@"My Awesome Game - Level 1" withParameters:@{@"difficulty" : @"easy"}];
 	
-	// Keep in mind that when calling endTimedEvent:withParameters: it will replace any parameters that you specified in startTimedEvent:withParameters:.
+	// Keep in mind that when calling endTimedEvent:withParameters:, it will replace any parameters that you specified in startTimedEvent:withParameters:.
 	[MaaSAnalytics endTimedEvent:@"My Awesome Game - Level 1" withParameters:@{@"difficulty" : @"easy", @"attempts" : @"5"}];
 	...
 }
 ````
-
-That's all there is to it!
-
-
 
 Requirements
 ------------
