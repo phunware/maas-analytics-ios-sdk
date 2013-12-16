@@ -113,6 +113,6 @@ MaaSAnalytics allows you to paramaterize your all of your events with up to 10 k
 Requirements
 ------------
 
-- MaaSCore v1.2.0 or greater.
+- MaaSCore v1.2.0 or greater
 - iOS 5.0 or greater
 - Xcode 4.4 or greater
