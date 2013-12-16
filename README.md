@@ -7,6 +7,15 @@ This is the iOS SDK for the MaaS Analytics module. Visit http://maas.phunware.co
 
 
 
+Requirements
+------------
+
+- MaaSCore v1.2.0 or greater
+- iOS 5.0 or greater
+- Xcode 4.4 or greater
+
+
+
 Getting Started
 ---------------
 
@@ -59,6 +68,7 @@ Inside your application delegate, you will need to initialize MaaSCore in the ap
     ...
 }
 ````
+
 ### Adding Events
 
 To add events with MaaSAnalytics:
@@ -109,10 +119,3 @@ MaaSAnalytics allows you to paramaterize your all of your events with up to 10 k
 	...
 }
 ````
-
-Requirements
-------------
-
-- MaaSCore v1.2.0 or greater
-- iOS 5.0 or greater
-- Xcode 4.4 or greater
