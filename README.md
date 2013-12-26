@@ -33,7 +33,7 @@ The following frameworks are required:
 MaaSCore.framework
 ````
 
-MaaS Analytics has a dependency on MaaSCore.framework which is available here: https://github.com/phunware/maas-core-ios-sdk
+MaaS Analytics has a dependency on MaaSCore.framework, which is available here: https://github.com/phunware/maas-core-ios-sdk
 
 It's recommended that you add the MaaS frameworks to the 'Vendor/Phunware' directory. This directory should contain MaaSCore.framework and MaaSAnalytics.framework, as well as any other MaaS frameworks that you are using.
 
