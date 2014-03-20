@@ -1,5 +1,8 @@
 #MaaSAnalytics Changelog
 
+##1.2.1 (Thursday, March 20th, 2014)
+ * Fixed potential crash when using timed analytics
+
 ##1.2.0 (Wednesday, November 6th, 2013)
  * Added namespace parameter to analytics methods to allow custom namespace support that will enable custom events processing.
  * Session event optimizations. No longer sending a SESSION_STOP event.
