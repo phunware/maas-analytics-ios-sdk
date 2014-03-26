@@ -1,5 +1,8 @@
 #MaaSAnalytics Changelog
 
+##1.2.2 (Wednesday, March 26th, 2014)
+ * Addig arm64 support
+
 ##1.2.1 (Thursday, March 20th, 2014)
  * Fixed potential crash when using timed analytics
 
