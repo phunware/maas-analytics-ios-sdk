@@ -1,7 +1,10 @@
 #MaaSAnalytics Changelog
 
+##1.2.3 (Tuesday, April 22nd, 2014)
+ * Fixing possible race condition when flushing cached events
+
 ##1.2.2 (Wednesday, March 26th, 2014)
- * Addig arm64 support
+ * Adding arm64 support
 
 ##1.2.1 (Thursday, March 20th, 2014)
  * Fixed potential crash when using timed analytics
