@@ -1,7 +1,7 @@
 MaaS Analytics SDK for iOS
 ================
 
-Version 1.2.3
+Version 1.2.4
 
 This is Phunware's iOS SDK for the MaaS Analytics module. Visit http://maas.phunware.com/ for more details and to sign up.
 
@@ -10,9 +10,9 @@ This is Phunware's iOS SDK for the MaaS Analytics module. Visit http://maas.phun
 Requirements
 ------------
 
-- MaaS Core v1.2.0 or greater
-- iOS 5.0 or greater
-- Xcode 4.4 or greater
+- MaaS Core v1.3.0 or greater
+- iOS 6.0 or greater
+- Xcode 6 or greater
 
 
 

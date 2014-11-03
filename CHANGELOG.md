@@ -1,5 +1,8 @@
 #MaaSAnalytics Changelog
 
+##1.2.4 (Monday, November 3rd, 2014)
+ * Adding encryption support
+
 ##1.2.3 (Tuesday, April 22nd, 2014)
  * Fixing possible race condition when flushing cached events
 
