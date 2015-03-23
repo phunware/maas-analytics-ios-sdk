@@ -48,13 +48,13 @@ Documentation is included in the Documents folder in the repository as both HTML
 Integration
 -----------
 
-You'll need to import the MaaSAnalytics.framework for wherever you'd like to add analytic events. You may want to include it in your Prefix.pch.
+You'll need to import the MaaSAnalytics.framework wherever you'd like to add analytic events. You may want to include it in your Prefix.pch.
 
 ````objective-c
 #import <MaaSAnalytics/MaaSAnalytics.h>
 ````
 
-Inside your application delegate, you will need to initialize MaaSCore in the application:didFinishLaunchingWithOptions: method. For more detailed MaaSCore installation instructions, please see: https://github.com/phunware/maas-core-ios-sdk#installation.
+Inside your application delegate, initialize MaaSCore in the application:didFinishLaunchingWithOptions: method. For more detailed MaaSCore installation instructions, please see: https://github.com/phunware/maas-core-ios-sdk#installation.
 
 ````objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -113,7 +113,7 @@ MaaS Analytics allows you to paramaterize your all of your events with up to 10 
 	
 	[MaaSAnalytics addEvent:@"My Awesome Game - Level 1" withParameters:@{@"difficulty" : @"easy"}];
 	
-	// Keep in mind that when calling endTimedEvent:withParameters, it will replace any parameters that you specified in startTimedEvent:withParameters.
+	// Keep in mind that calling endTimedEvent:withParameters will replace any parameters that you specified in startTimedEvent:withParameters.
 	[MaaSAnalytics endTimedEvent:@"My Awesome Game - Level 1" withParameters:@{@"difficulty" : @"easy", @"attempts" : @"5"}];
 	...
 }
