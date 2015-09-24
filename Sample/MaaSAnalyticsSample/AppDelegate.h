@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import <MaaSCore/MaaSCore.h>
-#import <MaaSAnalytics/MaaSAnalytics.h>
+#import <PWCore/PWCore.h>
+#import <PWAnalytics/PWAnalytics.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

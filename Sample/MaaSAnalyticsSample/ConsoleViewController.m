@@ -67,7 +67,7 @@
 {
     [super viewDidAppear:animated];
     
-    [MaaSAnalytics addEvent:@"Console Page View"];
+    [PWAnalytics addEvent:@"Console Page View"];
     [PWLogger log:@"Console Page View"];
 }
 
@@ -90,7 +90,7 @@
 
 - (void)clearConsole
 {
-    [MaaSAnalytics addEvent:@"Cleared Console"];
+    [PWAnalytics addEvent:@"Cleared Console"];
     
     [PWLogger clear];
     _textView.text = @"";
@@ -100,7 +100,7 @@
 
 - (void)emailInformation
 {
-    [MaaSAnalytics addEvent:@"Email Console Log Button Pressed"];
+    [PWAnalytics addEvent:@"Email Console Log Button Pressed"];
     [PWLogger log:@"Email Console Log Button Pressed"];
     
     if ([MFMailComposeViewController canSendMail] == YES)
@@ -135,7 +135,7 @@
     
     if (result == MFMailComposeResultSent)
     {
-        [MaaSAnalytics addEvent:@"Emailed Console Log"];
+        [PWAnalytics addEvent:@"Emailed Console Log"];
         [PWLogger log:@"Emailed Console Log"];
     }
 }

@@ -6,7 +6,7 @@
 //
 
 #import "InfoViewController.h"
-#import <MaaSCore/MaaSCore.h>
+#import <PWCore/PWCore.h>
 
 @interface MaaSCore ()
 
@@ -71,7 +71,7 @@
 {
     [super viewDidAppear:animated];
     
-    [MaaSAnalytics addEvent:@"Info Page View"];
+    [PWAnalytics addEvent:@"Info Page View"];
     [PWLogger log:@"Info Page View"];
 }
 
@@ -79,15 +79,15 @@
 
 - (void)refreshText
 {
-    [MaaSAnalytics addEvent:@"Refresh Button Pressed"];
+    [PWAnalytics addEvent:@"Refresh Button Pressed"];
     [PWLogger log:@"Refresh Button Pressed"];
     
-    _textView.text = [NSString stringWithFormat:@"MaaS Application ID:\n%@\n\nDevice ID:\n%@\n\n", [MaaSCore applicationID], [MaaSCore deviceID]];
+    _textView.text = [NSString stringWithFormat:@"MaaS Application ID:\n%@\n\nDevice ID:\n%@\n\n", [PWCore applicationID], [PWCore deviceID]];
 }
 
 - (void)emailInformation
 {
-    [MaaSAnalytics addEvent:@"Email Button Pressed"];
+    [PWAnalytics addEvent:@"Email Button Pressed"];
     [PWLogger log:@"Email Button Pressed"];
     
     if ([MFMailComposeViewController canSendMail] == YES)
@@ -122,7 +122,7 @@
     
     if (result == MFMailComposeResultSent)
     {
-        [MaaSAnalytics addEvent:@"Email Sent"];
+        [PWAnalytics addEvent:@"Email Sent"];
         [PWLogger log:@"Email Sent"];
     }
 }

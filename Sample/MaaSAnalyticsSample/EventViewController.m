@@ -111,7 +111,7 @@
     [super viewDidAppear:animated];
     
     [PWLogger log:@"Events Page View"];
-    [MaaSAnalytics addEvent:@"Events Page View"];
+    [PWAnalytics addEvent:@"Events Page View"];
 }
 
 #pragma mark - User Actions
@@ -119,19 +119,19 @@
 - (void)redButtonTapped
 {
     [PWLogger log:@"Red Button Pressed"];
-    [MaaSAnalytics addEvent:@"Red Button Pressed"];
+    [PWAnalytics addEvent:@"Red Button Pressed"];
 }
 
 - (void)greenButtonTapped
 {
     [PWLogger log:@"Green Button Pressed"];
-    [MaaSAnalytics addEvent:@"Green Button Pressed"];
+    [PWAnalytics addEvent:@"Green Button Pressed"];
 }
 
 - (void)blueButtonTapped
 {
     [PWLogger log:@"Blue Button Pressed"];
-    [MaaSAnalytics addEvent:@"Blue Button Pressed"];
+    [PWAnalytics addEvent:@"Blue Button Pressed"];
 }
 
 - (void)fruitButtonTapped
@@ -139,20 +139,20 @@
     NSString *selectedFruit = [self.fruitChoicesControl titleForSegmentAtIndex:self.fruitChoicesControl.selectedSegmentIndex];
     
     [PWLogger log:[NSString stringWithFormat:@"Fruit Button Pressed: %@", selectedFruit]];
-    [MaaSAnalytics addEvent:@"Fruit Button Pressed"
+    [PWAnalytics addEvent:@"Fruit Button Pressed"
              withParameters:@{@"fruit" : selectedFruit}];
 }
 
 - (void)startTimedEventButtonTapped
 {
     [PWLogger log:@"START: Test Timed Event"];
-    [MaaSAnalytics startTimedEvent:@"Test Timed Event"];
+    [PWAnalytics startTimedEvent:@"Test Timed Event"];
 }
 
 - (void)stopTimedEventButtonTapped
 {
     [PWLogger log:@"END: Test Timed Event"];
-    [MaaSAnalytics endTimedEvent:@"Test Timed Event"];
+    [PWAnalytics endTimedEvent:@"Test Timed Event"];
 }
 
 @end

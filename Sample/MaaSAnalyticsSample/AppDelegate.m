@@ -20,13 +20,10 @@
 {
     
     // Initialize MaaSCore with your credentials
-    [MaaSCore setApplicationID:@"YOUR_APPLICATION_ID"
+    [PWCore setApplicationID:@"YOUR_APPLICATION_ID"
                      accessKey:@"YOUR_ACCESS_KEY"
                   signatureKey:@"YOUR_SIGNATURE_KEY"
                  encryptionKey:@""];
-    
-    // Set the log level to debug so we can see what's going on
-    [MaaSCore setLoggingLevel:MaaSLogLevel_Debug forService:[MaaSAnalytics serviceName]];
     
     // Setup our application
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0 green:182/255.0f blue:235/255.0f alpha:1]];

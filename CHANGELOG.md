@@ -1,4 +1,8 @@
-#MaaSAnalytics Changelog
+#PWAnalytics Changelog
+
+##1.3.0 (Friday, September 25th, 2015)
+ * Adding support for PWCore v2.0.0
+ * Updated internal networking interfaces
 
 ##1.2.4 (Monday, November 3rd, 2014)
  * Adding encryption support
