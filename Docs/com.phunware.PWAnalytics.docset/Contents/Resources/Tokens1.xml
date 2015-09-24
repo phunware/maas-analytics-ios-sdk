@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PWAnalytics.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PWAnalytics</TokenIdentifier>
+			<Abstract type="html">PWAnalytics enables easy implementation of application workflow analytics. MaaSAnalytics supports standard analytics events, timed events and event parameters.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PWAnalytics/addEvent:</TokenIdentifier>
+			<Abstract type="html">Add an event to the analytics queue.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+			
+			<Declaration>+ (void)addEvent:(NSString *__nonnull)eventName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">Name of the event.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addEvent:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PWAnalytics/addEvent:eventNamespace:</TokenIdentifier>
+			<Abstract type="html">Add an event to the analytics queue.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+			
+			<Declaration>+ (void)addEvent:(NSString *__nonnull)eventName eventNamespace:(NSString *__nonnull)eventNamespace</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">Name of the event.</Abstract>
+				</Parameter><Parameter>
+					<Name>eventNamespace</Name>
+					<Abstract type="html">The namespace of the analytic event. Used for custom event processing.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addEvent:eventNamespace:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PWAnalytics/addEvent:withParameters:</TokenIdentifier>
+			<Abstract type="html">Add an event to the analytics queue. Parameters must follow these rules:
+  (1) Keys and values must be NSString objects.
+  (2) There may be no more than 10 parameters. Extra parameters will be ignored.
+  (3) Each key or value that is longer than 256 characters will be truncated.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+			
+			<Declaration>+ (void)addEvent:(NSString *__nonnull)eventName withParameters:(NSDictionary *__nullable)parameters</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">Name of the event.</Abstract>
+				</Parameter><Parameter>
+					<Name>parameters</Name>
+					<Abstract type="html">NSString key / value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addEvent:withParameters:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PWAnalytics/addEvent:withParameters:eventNamespace:</TokenIdentifier>
+			<Abstract type="html">Add an event to the analytics queue. Parameters must follow these rules:
+  (1) Keys and values must be NSString objects.
+  (2) There may be no more than 10 parameters. Extra parameters will be ignored.
+  (3) Each key or value that is longer than 256 characters will be truncated.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+			
+			<Declaration>+ (void)addEvent:(NSString *__nonnull)eventName withParameters:(NSDictionary *__nullable)parameters eventNamespace:(NSString *__nullable)eventNamespace</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">Name of the event.</Abstract>
+				</Parameter><Parameter>
+					<Name>parameters</Name>
+					<Abstract type="html">NSString key / value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}.</Abstract>
+				</Parameter><Parameter>
+					<Name>eventNamespace</Name>
+					<Abstract type="html">The namespace of the analytic event. Used for custom event processing.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addEvent:withParameters:eventNamespace:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PWAnalytics/startTimedEvent:</TokenIdentifier>
+			<Abstract type="html">Start a timed event. Calling startTimedEvent: with the same eventName prior to endTimedEvent: will overwrite the previous start time.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+			
+			<Declaration>+ (void)startTimedEvent:(NSString *__nonnull)eventName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">Name of the event to start.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/startTimedEvent:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PWAnalytics/startTimedEvent:eventNamespace:</TokenIdentifier>
+			<Abstract type="html">Start a timed event. Calling startTimedEvent: with the same eventName prior to endTimedEvent: will overwrite the previous start time.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+			
+			<Declaration>+ (void)startTimedEvent:(NSString *__nonnull)eventName eventNamespace:(NSString *__nullable)eventNamespace</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">Name of the event to start.</Abstract>
+				</Parameter><Parameter>
+					<Name>eventNamespace</Name>
+					<Abstract type="html">The namespace of the analytic event. Used for custom event processing.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/startTimedEvent:eventNamespace:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PWAnalytics/startTimedEvent:withParameters:</TokenIdentifier>
+			<Abstract type="html">Start a timed event with the specified parameters. Calling startTimedEvent: with the same eventName prior to endTimedEvent: will overwrite the previous start time. Parameters must follow these rules:
+  (1) Keys and values must be NSString objects.
+  (2) There may be no more than 10 parameters. Extra parameters will be ignored.
+  (3) Each key or value that is longer than 256 characters will be truncated.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+			
+			<Declaration>+ (void)startTimedEvent:(NSString *__nonnull)eventName withParameters:(NSDictionary *__nullable)parameters</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">Name of the event to start.</Abstract>
+				</Parameter><Parameter>
+					<Name>parameters</Name>
+					<Abstract type="html">NSString key / value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/startTimedEvent:withParameters:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PWAnalytics/startTimedEvent:withParameters:eventNamespace:</TokenIdentifier>
+			<Abstract type="html">Start a timed event with the specified parameters. Calling startTimedEvent: with the same eventName prior to endTimedEvent: will overwrite the previous start time. Parameters must follow these rules:
+  (1) Keys and values must be NSString objects.
+  (2) There may be no more than 10 parameters. Extra parameters will be ignored.
+  (3) Each key or value that is longer than 256 characters will be truncated.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+			
+			<Declaration>+ (void)startTimedEvent:(NSString *__nonnull)eventName withParameters:(NSDictionary *__nullable)parameters eventNamespace:(NSString *__nullable)eventNamespace</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">Name of the event to start.</Abstract>
+				</Parameter><Parameter>
+					<Name>parameters</Name>
+					<Abstract type="html">NSString key / value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}.</Abstract>
+				</Parameter><Parameter>
+					<Name>eventNamespace</Name>
+					<Abstract type="html">The namespace of the analytic event. Used for custom event processing.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/startTimedEvent:withParameters:eventNamespace:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PWAnalytics/pauseTimedEvent:</TokenIdentifier>
+			<Abstract type="html">Pause a timed event with the specified eventName. If an event is ended while still in a paused state, then the paused time will be used as the end time. If an event is already paused, this method will do nothing.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+			
+			<Declaration>+ (void)pauseTimedEvent:(NSString *__nonnull)eventName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">The name of the event to pause.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pauseTimedEvent:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PWAnalytics/resumeTimedEvent:</TokenIdentifier>
+			<Abstract type="html">Resume a timed event with the specified eventName. If an event is ended while still in a paused state, then the paused time will be used as the end time. If an event is already paused, this method will do nothing.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+			
+			<Declaration>+ (void)resumeTimedEvent:(NSString *__nonnull)eventName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">The name of the event to resume.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/resumeTimedEvent:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PWAnalytics/endTimedEvent:</TokenIdentifier>
+			<Abstract type="html">End a timed event with the specified eventName. The event will be ignored if the event duration is less than one second. This method will do nothing if the event name cannot be found.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+			
+			<Declaration>+ (void)endTimedEvent:(NSString *__nonnull)eventName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">The name of the event to end.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/endTimedEvent:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PWAnalytics/endTimedEvent:withParameters:</TokenIdentifier>
+			<Abstract type="html">End a timed event with the specified eventName. The event will be ignored if the event duration is less than one second. This method will do nothing if the event name cannot be found. Parameters must follow these rules:
+  (1) Keys and values must be NSString objects.
+  (2) There may be no more than 10 parameters. Extra parameters will be ignored.
+  (3) Each key or value that is longer than 256 characters will be truncated.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+			
+			<Declaration>+ (void)endTimedEvent:(NSString *__nonnull)eventName withParameters:(NSDictionary *__nullable)parameters</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">The name of the event to end.</Abstract>
+				</Parameter><Parameter>
+					<Name>parameters</Name>
+					<Abstract type="html">NSString key / value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/endTimedEvent:withParameters:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PWAnalytics/endTimedEvent:withParameters:eventNamespace:</TokenIdentifier>
+			<Abstract type="html">End a timed event with the specified eventName. The event will be ignored if the event duration is less than one second. This method will do nothing if the event name cannot be found. Parameters must follow these rules:
+  (1) Keys and values must be NSString objects.
+  (2) There may be no more than 10 parameters. Extra parameters will be ignored.
+  (3) Each key or value that is longer than 256 characters will be truncated.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+			
+			<Declaration>+ (void)endTimedEvent:(NSString *__nonnull)eventName withParameters:(NSDictionary *__nullable)parameters eventNamespace:(NSString *__nullable)eventNamespace</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">The name of the event to end.</Abstract>
+				</Parameter><Parameter>
+					<Name>parameters</Name>
+					<Abstract type="html">NSString key / value parameters. For example, @{@&quot;key&quot; : @&quot;value&quot;}.</Abstract>
+				</Parameter><Parameter>
+					<Name>eventNamespace</Name>
+					<Abstract type="html">The namespace of the analytic event. Used for custom event processing.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/endTimedEvent:withParameters:eventNamespace:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PWAnalytics/serviceName</TokenIdentifier>
+			<Abstract type="html">Returns &apos;MaaSAnalytics&apos;.</Abstract>
+			<DeclaredIn>PWAnalytics.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *__nonnull)serviceName</Declaration>
+			
+			
+			<Anchor>//api/name/serviceName</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>
