@@ -1,5 +1,9 @@
 #PWAnalytics Changelog
 
+##3.0.0 (Tuesday, October 25th, 2016)
+ * Consolidate dev, stage and prod.
+ * Remove upexpected logs.
+ 
 ##1.3.0 (Friday, September 25th, 2015)
  * Adding support for PWCore v2.0.0
  * Updated internal networking interfaces
