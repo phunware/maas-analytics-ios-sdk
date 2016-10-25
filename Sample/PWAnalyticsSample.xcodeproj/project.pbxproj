@@ -35,8 +35,8 @@
 		09FC8B871790C5AE00E9C36F /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FC8B861790C5AE00E9C36F /* EventViewController.m */; };
 		09FC8B8A1790C5B800E9C36F /* ConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FC8B891790C5B800E9C36F /* ConsoleViewController.m */; };
 		09FC8B8D1790C69900E9C36F /* PWLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FC8B8C1790C69900E9C36F /* PWLogger.m */; };
-		B08ACA4E1BB49C630088513E /* PWCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08ACA4C1BB49C630088513E /* PWCore.framework */; settings = {ASSET_TAGS = (); }; };
-		B08ACA4F1BB49C630088513E /* PWAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08ACA4D1BB49C630088513E /* PWAnalytics.framework */; settings = {ASSET_TAGS = (); }; };
+		B08ACA4E1BB49C630088513E /* PWCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08ACA4C1BB49C630088513E /* PWCore.framework */; };
+		B08ACA4F1BB49C630088513E /* PWAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08ACA4D1BB49C630088513E /* PWAnalytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -249,6 +249,11 @@
 			attributes = {
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Phunware Inc.";
+				TargetAttributes = {
+					094937171790A6EA006527CE = {
+						DevelopmentTeam = 84CK77G588;
+					};
+				};
 			};
 			buildConfigurationList = 094937131790A6EA006527CE /* Build configuration list for PBXProject "PWAnalyticsSample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -377,17 +382,18 @@
 		094937361790A6EA006527CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 84CK77G588;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SDKs\"",
 					"$(PROJECT_DIR)/SDKS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MaaSAnalyticsSample/MaaSAnalyticsSample-Prefix.pch";
+				GCC_PREFIX_HEADER = "MaaSAnalyticsSample/PWAnalyticsSample-Prefix.pch";
 				INFOPLIST_FILE = "MaaSAnalyticsSample/MaaSAnalyticsSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.phunware.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phunware.analytics;
 				PRODUCT_NAME = Analytics;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -397,17 +403,18 @@
 		094937371790A6EA006527CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 84CK77G588;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SDKs\"",
 					"$(PROJECT_DIR)/SDKS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MaaSAnalyticsSample/MaaSAnalyticsSample-Prefix.pch";
+				GCC_PREFIX_HEADER = "MaaSAnalyticsSample/PWAnalyticsSample-Prefix.pch";
 				INFOPLIST_FILE = "MaaSAnalyticsSample/MaaSAnalyticsSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.phunware.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phunware.analytics;
 				PRODUCT_NAME = Analytics;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
