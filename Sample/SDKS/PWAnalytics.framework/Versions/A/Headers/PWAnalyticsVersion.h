@@ -8,6 +8,6 @@
 #ifndef MaaSAnalytics_MaaSAnalyticsVersion_h
 #define MaaSAnalytics_MaaSAnalyticsVersion_h
 
-#define PWAnalytics_VERSION  @"1.3.0"
+#define PWAnalytics_VERSION  @"1.3.1"
 
 #endif

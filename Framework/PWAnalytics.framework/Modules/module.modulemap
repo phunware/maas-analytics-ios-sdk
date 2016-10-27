@@ -1,0 +1,6 @@
+framework module PWAnalytics {
+  umbrella header "PWAnalytics.h"
+
+  export *
+  module * { export * }
+}
