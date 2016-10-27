@@ -1,7 +1,7 @@
 Phunware Analytics SDK for iOS
 ================
 
-Version 3.0.0
+Version 1.3.1
 
 This is Phunware's iOS SDK for the Analytics module. Visit http://maas.phunware.com/ for more details and to sign up.
 
@@ -9,7 +9,7 @@ This is Phunware's iOS SDK for the Analytics module. Visit http://maas.phunware.
 Requirements
 ------------
 
-- PWCore v3.0.0 or greater
+- PWCore v3.0.2 or greater
 - iOS 7.0 or greater
 - Xcode 6 or greater
 

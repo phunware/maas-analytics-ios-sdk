@@ -1,6 +1,6 @@
 #PWAnalytics Changelog
 
-##3.0.0 (Tuesday, October 25th, 2016)
+##1.3.1 (Thursday, October 27th, 2016)
  * Consolidate dev, stage and prod.
  * Remove upexpected logs.
  
